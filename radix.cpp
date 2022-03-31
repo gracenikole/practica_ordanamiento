@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <random>
 #include <vector>
 #include <chrono>
 
@@ -55,12 +56,24 @@ void RadixSort(vector<int> &arr) {
 }
 
 int main() {
+  srand(time(0));
+  vector<int> nums = {};
+  int tam = 1000000;
+
+  for (int i = 0; i < tam; i++) {
+    int a = rand() % 1000;
+    int b = rand() % 1000;
+    nums.push_back(a - b);
+  }
+
+  // print(nums);
+
+  // vector<int> a{90, 26, 58, 170, 45, 75, 90, 802, 24, 2, 66};
   auto start = chrono::high_resolution_clock::now();
-  vector<int> a{90, 26, 58, 170, 45, 75, 90, 802, 24, 2, 66};
-  RadixSort(a);
+  RadixSort(nums);
   auto end = chrono::high_resolution_clock::now();
   double time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
-  print(a);
+  // print(nums);
   time_taken *= 1e-9;
   cout << "Time taken by program is : " << fixed << time_taken << " sec" << endl;
   return 0;
