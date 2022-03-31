@@ -1,0 +1,3 @@
+D:/Algoritmos y Estructuras de Datos/ordenamiento/cmake-build-debug/CMakeFiles/ordenamiento.dir
+D:/Algoritmos y Estructuras de Datos/ordenamiento/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Algoritmos y Estructuras de Datos/ordenamiento/cmake-build-debug/CMakeFiles/rebuild_cache.dir
